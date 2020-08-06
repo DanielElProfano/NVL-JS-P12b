@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript" >
+	
+/*Home / Práctica de bucles (II)
+Código de la práctica: NVL-JS-P10b
+Tiempo orientativo de ejecución: 20-25 minutos
+
+Asumiendo que Math.floor((Math.random() * 100) + 1); saca elementos al azar entre 1 y 100, queremos que hagas lo siguiente:
+ 
+
+Saca 50 números al azar entre 1 y 100
+Almacena los números que salgan impares en un array impares
+Almacena los números que salgan pares en un array pares*/
+
+var num;
+var a_par = []; //inicializacion del array
+var a_impar = []; //inicializacion del array
+var resto;
+var j = 0; //inicializacion de los indices de los arrays, cada uno tiene el suyo.
+var x = 0;
+
+for (var i=0; i<50;i++)
+
+{
+	var numero = aleatorio();
+	
+	//alert(numero);
+	var par = calculo(numero);
+	
+	if (par == true){
+		a_par[j]=numero;
+		j++;
+	}else{
+		a_impar[x]=numero
+		x++;}
+
+}
+
+	alert("array par: "+a_par);
+	alert("array impar: "+a_impar);
+
+
+
+function aleatorio(){
+	var num = Math.floor((Math.random() * 100) + 1);
+	return num;
+}
+function calculo(num){
+	var par = num % 2;
+	if (par == 0){
+		return true;
+	}else{
+		return false;
+	}
+}
+</script>
+</html>
